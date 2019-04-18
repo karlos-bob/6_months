@@ -1,0 +1,10 @@
+@import "_mixins/font-face";
+
+@include font-face("roboto-example", "../fonts/RobotoRegular/RobotoRegular");
+@include font-face("roboto-example", "../fonts/RobotoBold/RobotoBold", bold);
+
+@include font-face("raleway-regular", "../fonts/RalewayRegular/Raleway-Regular");
+@include font-face("raleway-bold", "../fonts/RalewayBold/Raleway-Bold", bold);
+@include font-face("raleway-light", "../fonts/RalewayLight/Raleway-Light");
+
+

@@ -1,0 +1,103 @@
+@import "reset";
+@import "vars";
+@import "fonts";
+@import "libs";
+@import "template/index.scss";
+
+
+* {
+	box-sizing: border-box;
+  }
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  //font-family: "raleway-regular";
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.65;
+	font-family: $default-font;
+	overflow-x: hidden;
+	color: $text;
+
+	// Sticky Footer
+	display: flex;
+  	flex-direction: column;
+	min-height: 100vh;
+
+
+	input, textarea {
+		border: #666 1px solid;
+		outline: none;
+		&:focus:required:invalid {
+			border-color: red;
+		}
+		&:required:valid {
+			border-color: green;
+		}
+	}
+
+	header > div, 
+	footer > div {
+		max-width: 1200px;
+	}
+
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	&.img-width {
+		width: 100%;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+section#navMenu,
+footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+
+
+footer {
+	background-color: $darkGray;
+	text-transform: uppercase;
+	padding: 70px 0;
+  	//flex-shrink: 0;
+	p {
+		color: $textGray;
+		
+		span {
+			color: $pink;
+			margin-left: 10px;
+		}
+	}
+}
+
+
+
+@import "media"; // Always at the end

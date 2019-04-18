@@ -1,0 +1,75 @@
+@import "vars";
+
+
+/*==========  Desktop First  ==========*/
+
+// ДО ≥1200px
+@include media-breakpoint-down(lg) {
+	
+}
+
+//ДО ≥992px
+@include media-breakpoint-down(md) {
+    
+    
+}
+
+//ДО ≥768px
+@include media-breakpoint-down(sm) {
+    main  > section > {
+        padding: 0 10px;
+    }
+
+    main {
+        section#myProjects > .gallery {
+            width: 100%;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6, 300px);
+        }
+    }
+}
+
+//ДО ≥576px
+@include media-breakpoint-down(xs) {
+    
+}
+
+
+/*==========  Mobile First  ==========*/
+
+//ОТ ≤576px
+@include media-breakpoint-up(sm) {
+
+}
+
+//ОТ ≤768px
+@include media-breakpoint-up(md) {
+    main {
+        // padding: 0 3%;
+        section#myProjects > .gallery {
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(3, 300px);
+            grid-gap: 0;
+        }
+    }
+}
+
+//ОТ ≤992px
+@include media-breakpoint-up(lg) {
+    main {
+        section#myProjects > .gallery {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 300px);
+        }
+
+        section#contactMe > .feedback {
+            min-width: 600px;
+        }
+    }
+}
+
+//ОТ ≤1200px
+@include media-breakpoint-up(xl) {
+	
+}

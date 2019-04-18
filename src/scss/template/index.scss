@@ -1,0 +1,587 @@
+
+main {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    perspective: 1px;
+    flex: 1;
+
+    .parallax {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 24pt;
+        font-weight: bold;
+        flex: 1 0 auto;
+        color: #fff;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-size: 100%;
+            transform: translateZ(-1px) scale(2.1);
+            z-index: -1;
+            background: url(../img/gallery-images/stars.jpg);
+            background-color: rgb(250, 228, 216);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .home__greeting {
+            //z-index: 99;
+            text-align: center;
+            text-transform: uppercase;
+            display: block;
+
+            span {
+                color: $pink;
+            }
+
+        }
+
+        .home__button {
+            position: relative;
+            text-transform: uppercase;
+            font-size: 16pt;
+            padding: 12px 50px 12px 20px;
+            color: #fff;
+            background: 0 0;
+            outline: 0;
+            border: 2px solid #fff;
+            cursor: pointer;
+            -webkit-transition: all .5s;
+            -o-transition: all .5s;
+            transition: all .5s;
+            margin: 15px 0 25px;
+
+            i {
+                transition: transform .3s;
+                position: absolute;
+                right: 15px;
+                top: 20px;
+            }
+
+            &:hover {
+                background: #04c2c9;
+                border-color: #04c2c9;
+
+                i {
+                    transform: rotate(90deg);
+                }
+
+            }
+        }
+
+        #space {
+            font-size: 14pt;
+            border: 2px solid #fff;
+
+            width: auto;
+            height: auto;
+            display: grid;
+            grid-template-rows: minmax(150px, auto) minmax(150px, auto) minmax(150px, auto);
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 2vw;
+            background-color: #000;
+
+            div {
+                 box-sizing: border-box;   
+            }
+
+        }
+    }
+        .content {
+            width: 100%;
+
+            section {
+                padding: 65px 0;
+                position: relative;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                & > div {
+                    max-width: 1200px;
+                }
+            }
+
+            section#navMenu {
+                animation: popDown .5s;
+                background-color: $darkGray;
+                border-bottom: 3px solid #04C2C9;
+                color: #fff;
+                height: 40px;
+                width: 100%;
+                padding: 45px 25px;
+                z-index: 99999999999;
+
+                @keyframes popDown {
+                    0% {
+                        transform: translateY(-100px);
+                    }
+                }
+
+                nav {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    .active {
+                        color: $pink;
+                    }
+
+                    div.page-link {
+                        margin: 0 20px;
+                        cursor: pointer;
+                        transition: color .5s;
+                        text-transform: uppercase;
+                        font-size: 16pt;
+
+                        &:hover {
+                            color: $pink;
+                        }
+                    }
+                }
+            }
+
+            section#about {
+                height: 600px;
+                background-color: mediumpurple;
+            }
+
+            section#myProjects {
+                background-color: $lightGray;
+                .gallery {
+                    display: grid;
+                    grid-gap: 6px;
+                    align-items: center;
+                    justify-items: center;
+
+                    .galleryItem {
+                        position: relative;
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+
+                        border-radius: 3px;
+                        // -webkit-box-shadow: 7px 7px 20px 14px rgba(0,0,0,0.02);
+                        // -moz-box-shadow: 7px 7px 20px 14px rgba(0,0,0,0.02);
+                        // box-shadow: 7px 7px 20px 14px rgba(0,0,0,0.05);
+
+                        & > img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            display: block;
+                            z-index: 1;
+                            position: absolute;
+                        }
+
+                        &:hover > .galleryInfo {
+                            opacity: 1;
+                            transition: opacity .5s;
+                            cursor: pointer;
+
+                            h3 {
+                                top: 120px;
+                            }
+
+                            p {
+                                top: 155px;
+                            }
+
+                            button {
+                                bottom: 40px;
+                            }
+
+                        }
+
+                        .galleryInfo {
+                            display: block;
+                            position: relative;
+                            opacity: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: $lightGray;
+                            transition: opacity .5s;
+                            color: #000;
+                            text-align: center;
+                            z-index: 999;
+
+                            h3, button, p {
+                                position: absolute;
+                                left: 0;
+                                right: 0;
+                                margin: 0 auto;
+                                transition: all 0.3s ease-in-out;
+                            }
+
+                            h3 {
+                                font-size: 18pt;
+                                font-family: "raleway-bold", sans-serif;
+                                top: 20px;
+                            }
+
+                            p {
+                                color: $pink;
+                                top: 55px;
+                            }
+
+                            button {
+                                bottom: 0;
+                                color: black;
+                                background-color: inherit;
+                                text-transform: uppercase;
+                                text-decoration: none;
+                                display: block;
+                                border: 2px solid $pink;
+                                width: 170px;
+                                font-size: 13pt;
+                                padding: 7px 0;
+                                cursor: pointer;
+
+                                &:hover {
+                                    background-color: $pink;
+                                    color: #fff;
+                                }
+                            }
+
+                        }
+
+                        #active {
+                            display: block;
+
+                        }
+
+                        .galleryPopUp {
+                            display: none;
+                            width: 100%;
+                            height: 100%;
+                            background: rgba(0, 0, 0, 0.5);
+                            overflow: hidden;
+                            // overflow:visible;
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            text-align: center;
+                            transition: opacity .3s;
+                            z-index: 999999;
+                            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
+                            .popUpContent {
+                                width: 900px;
+                                //height: 800px;
+                                background-color: #fff;
+                                // padding:25px 65px;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                position: absolute;
+                                top: 5%;
+                                left: 0;
+                                right: 0;
+                                margin: 0 auto;
+
+                                & > div, a {
+                                    margin: 15px 0;
+                                }
+
+                                .slider {
+                                    width: 100%;
+                                    height: 400px;
+                                    margin: 0;
+                                    cursor: pointer;
+                                    position: relative;
+
+                                    .owl-carousel {
+                                        height: 100%;
+
+                                        .owl-stage-outer {
+                                            height: 100%;
+                                        }
+
+                                        //.slick-list {
+                                        //    height: 100%;
+                                        //
+                                        //    .slick-track {
+                                        //        height: 100%;
+                                        //    }
+                                        //}
+                                    }
+                                    .owl-nav {
+                                        width: 100%;
+                                        position: absolute;
+                                        bottom: 0;
+                                        display: flex;
+                                        flex-direction: row;
+                                        justify-content: space-between;
+                                        z-index: 200000;
+
+                                        button[type='button'] {
+                                            width: 64px;
+                                            height: 54px;
+                                            border: none;
+                                            background: rgba(0, 0, 0, 0.3);
+                                            color: #fff;
+                                            cursor: pointer;
+                                            -moz-appearance: none !important;
+                                            -webkit-appearance: none !important;
+                                            -webkit-user-select: none;
+                                            -moz-user-select: none;
+                                            -ms-user-select: none;
+                                            -o-user-select: none;
+                                            user-select: none;
+                                            transition: all ease-out .4s !important;
+
+                                            &::-moz-focus-outer, &::-moz-focus-inner {
+                                                border: 0;
+                                            }
+
+                                            &:focus {
+                                                outline: 0;
+                                            }
+                                            &:active {
+
+                                                font-size: 20pt;
+                                                transition: .4s !important;
+                                            }
+                                        }
+                                    }
+
+                                }
+
+                                .sliderDescription {
+                                    text-align: left;
+
+                                    h1 {
+                                        font-size: 22pt;
+                                        line-height: 30pt;
+                                        font-weight: bold;
+                                        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                                    }
+
+                                    p {
+                                        font-size: 16pt;
+                                        line-height: 18pt;
+                                        margin-top: 15px;
+                                    }
+                                }
+
+                                .popUpNav, .sliderDescription {
+                                    padding: 0 35px;
+                                }
+
+                                .popUpNav {
+                                    width: 100%;
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: space-between;
+
+                                    &:hover a {
+                                        cursor: pointer;
+                                    }
+
+                                    a.popUpLink {
+                                        display: block;
+                                        position: relative;
+                                        font-weight: bold;
+                                        margin: 0;
+                                        padding: 8px 0;
+                                        height: 50px;
+                                        color: #fff;
+                                        background-color: $blue;
+                                        text-transform: uppercase;
+                                        text-decoration: none;
+                                        text-align: center;
+                                        border: 2px solid $blue;
+                                        width: 170px;
+                                        font-size: 13pt;
+                                        transition: all .3s;
+                                        cursor: pointer;
+
+                                        i {
+                                            position: absolute;
+                                        }
+
+                                        i.fa-external-link-alt {
+
+                                            top: 13px;
+                                            display: inline;
+                                            left: 8px;
+                                        }
+                                        i.fa-angle-double-right {
+                                            top: 16px;
+                                            // right: 2px;
+                                            opacity: 0;
+                                            // transition: 0.5s steps(2);
+                                            // &:target {
+                                            //     margin-left: 16px;
+                                            // }
+
+                                        }
+
+                                        &:hover {
+                                            background-color: #fff;
+                                            color: #000;
+
+                                            i.fa-external-link-alt {
+                                                // transition: all .4s;
+                                                display: none;
+
+                                            }
+
+                                            i.fa-angle-double-right {
+                                                @keyframes go-left-right {
+                                                    from {
+                                                        right: 10px;
+                                                    }
+                                                    to {
+                                                        right: 15px;
+                                                    }
+                                                }
+                                                @-webkit-keyframes go-left-right {
+                                                    from {
+                                                        right: 10px;
+                                                    }
+                                                    to {
+                                                        right: 15px;
+                                                    }
+                                                }
+                                                opacity: 1;
+                                                animation: go-left-right .370s infinite alternate;
+                                                -webkit-animation: go-left-right .370s infinite alternate;
+
+                                            }
+                                        }
+                                    }
+
+                                    a.popUpClose {
+
+                                        width: 80px;
+                                        height: 50px;
+                                        margin: 0;
+                                        position: relative;
+
+                                        span::after {
+                                            position: absolute;
+                                            content: '';
+                                            display: block;
+                                            background-color: #bbb;
+                                            height: 5px;
+                                            width: 40px;
+                                            margin-bottom: 5px;
+                                            border-radius: 4px;
+                                            top: 20px;
+                                            right: 20px;
+                                            transition: all .4s;
+                                        }
+
+                                        span.popUpCloseSpan1::after {
+                                            transform: rotate(40deg);
+                                        }
+
+                                        span.popUpCloseSpan2::after {
+                                            transform: rotate(-40deg);
+                                        }
+
+                                        &:hover .popUpCloseSpan1::after {
+                                            transform: rotate(400deg);
+                                        }
+
+                                        &:hover .popUpCloseSpan2::after {
+                                            transform: rotate(320deg);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            section#contactMe {
+                background: #252934;
+                position: relative;
+                padding-top: 95px;
+
+                svg {
+                    position: absolute;
+                    top: -1px;
+                }
+
+                .sectionTitle {
+                    color: #fff;
+                    &::after {
+                        background-color: #fff;
+                    }
+                }
+
+                .feedback {
+                    form {
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+
+                        input[type="text"],
+                        input[type="email"],
+                        textarea {
+                            display: block;
+                            width: 100%;
+                            box-sizing: border-box;
+                            outline: none;
+                            border: 0;
+                            padding: 10px 15px;
+                            background: #1E242C;
+                            font-size: 12pt;
+                            margin-bottom: 5px;
+                            color: #fff;
+                        }
+
+                        textarea {
+                            min-height: 150px;
+                            margin-bottom: 40px;
+                        }
+
+                        input[type="submit"] {
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            // margin: 5px 0 0 0;
+                            font-size: 12pt;
+                            padding: 10px 30px;
+                            color: #fff;
+                            background: transparent;
+                            outline: 0;
+                            border: 2px solid #fff;
+                            cursor: pointer;
+                            transition: all .5s;
+
+                            &:hover {
+                                background: $blue;
+                                border-color: $blue;
+                            }
+                        }
+
+                        #success {
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+
+
