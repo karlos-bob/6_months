@@ -10,14 +10,11 @@ main {
         position: relative;
         height: 100vh;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         font-size: 24pt;
         font-weight: bold;
         flex: 1 0 auto;
         color: #fff;
+        overflow: hidden;
 
         &::after {
             content: '';
@@ -28,76 +25,144 @@ main {
             right: 0;
             background-size: 100%;
             transform: translateZ(-1px) scale(2.1);
-            z-index: -1;
-            background: url(../img/gallery-images/stars.jpg);
-            background-color: rgb(250, 228, 216);
-            background-size: cover;
-            background-repeat: no-repeat;
+            z-index: -19999;
+            background: radial-gradient(ellipse at bottom, #131a28 0%, #000000 80%);
         }
 
-        .home__greeting {
-            //z-index: 99;
-            text-align: center;
-            text-transform: uppercase;
-            display: block;
-
-            span {
-                color: $pink;
+        @function multiple-box-shadow ($n) {
+            $value: '#{random(2000)}px #{random(2000)}px #FFF';
+            @for $i from 2 through $n {
+                $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF';
             }
 
+            @return unquote($value)
         }
 
-        .home__button {
-            position: relative;
-            text-transform: uppercase;
-            font-size: 16pt;
-            padding: 12px 50px 12px 20px;
-            color: #fff;
-            background: 0 0;
-            outline: 0;
-            border: 2px solid #fff;
-            cursor: pointer;
-            -webkit-transition: all .5s;
-            -o-transition: all .5s;
-            transition: all .5s;
-            margin: 15px 0 25px;
+        $shadows-small:  multiple-box-shadow(300);
+        $shadows-medium: multiple-box-shadow(200);
+        $shadows-big:    multiple-box-shadow(100);
 
-            i {
-                transition: transform .3s;
+        @keyframes animStar {
+            from {
+                transform: translateY(0px);
+            }
+            to {
+                transform: translateY(-2000px);
+            }
+        }
+
+        .stars {
+            background-color: transparent;
+            border-radius: 50%;
+            &:after {
+                border-radius: 50%;
+                content: " ";
                 position: absolute;
-                right: 15px;
-                top: 20px;
+                top: 2000px;
+                background: transparent;
+            }
+        }
+
+        #stars1 {
+            width: 1px;
+            height: 1px;
+            box-shadow: $shadows-small;
+            animation: animStar 75s linear infinite;
+
+            &:after {
+                width: 1px;
+                height: 1px;
+                box-shadow: $shadows-small;
             }
 
-            &:hover {
-                background: #04c2c9;
-                border-color: #04c2c9;
+        }
+        #stars2{
+            width: 2px;
+            height: 2px;
+            box-shadow: $shadows-medium;
+            animation: animStar 90s linear infinite;
 
-                i {
-                    transform: rotate(90deg);
+            &:after {
+                width: 2px;
+                height: 2px;
+                box-shadow: $shadows-medium;
+            }
+
+        }
+        #stars3 {
+            width: 3px;
+            height: 3px;
+            box-shadow: $shadows-big;
+            animation: animStar 120s linear infinite;
+
+            &:after {
+                width: 3px;
+                height: 3px;
+                box-shadow: $shadows-big;
+            }
+
+        }
+
+        .home-text {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left:0;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .home__greeting {
+                //z-index: 99;
+                text-align: center;
+                text-transform: uppercase;
+                display: block;
+
+                span {
+                    color: $pink;
                 }
 
             }
-        }
 
-        #space {
-            font-size: 14pt;
-            border: 2px solid #fff;
+            .home__button {
+                position: relative;
+                text-transform: uppercase;
+                font-size: 16pt;
+                padding: 12px 50px 12px 20px;
+                color: #fff;
+                background: 0 0;
+                outline: 0;
+                border: 2px solid #fff;
+                cursor: pointer;
+                -webkit-transition: all .5s;
+                -o-transition: all .5s;
+                transition: all .5s;
+                margin: 15px 0 25px;
+                max-width: 240px;
 
-            width: auto;
-            height: auto;
-            display: grid;
-            grid-template-rows: minmax(150px, auto) minmax(150px, auto) minmax(150px, auto);
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-gap: 2vw;
-            background-color: #000;
+                i {
+                    transition: transform .3s;
+                    position: absolute;
+                    right: 15px;
+                    top: 20px;
+                }
 
-            div {
-                 box-sizing: border-box;   
+                &:hover {
+                    background: #04c2c9;
+                    border-color: #04c2c9;
+
+                    i {
+                        transform: rotate(90deg);
+                    }
+
+                }
             }
-
         }
     }
+
         .content {
             width: 100%;
 
