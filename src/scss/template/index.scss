@@ -25,14 +25,14 @@ main {
             right: 0;
             background-size: 100%;
             transform: translateZ(-1px) scale(2.1);
-            z-index: -19999;
-            background: radial-gradient(ellipse at bottom, #131a28 0%, #000000 80%);
+            z-index: -1;
+            background: radial-gradient(ellipse at bottom, #171b2e 10%, #000000 80%);
         }
 
         @function multiple-box-shadow ($n) {
             $value: '#{random(2000)}px #{random(2000)}px #FFF';
             @for $i from 2 through $n {
-                $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF';
+                $value: '#{$value} , #{random(3000)}px #{random(2000)}px #FFF';
             }
 
             @return unquote($value)
@@ -62,7 +62,6 @@ main {
                 background: transparent;
             }
         }
-
         #stars1 {
             width: 1px;
             height: 1px;
