@@ -6,15 +6,16 @@ main {
     perspective: 1px;
     flex: 1;
 
-    .parallax {
+    #home {
         position: relative;
         height: 100vh;
         width: 100%;
-        font-size: 24pt;
+        font-size: 28pt;
         font-weight: bold;
         flex: 1 0 auto;
         color: #fff;
         overflow: hidden;
+        //display: none;
 
         &::after {
             content: '';
@@ -43,13 +44,13 @@ main {
         $shadows-big:    multiple-box-shadow(100);
 
         @keyframes animStar {
-            from {
-                transform: translateY(0px);
-            }
-            to {
-                transform: translateY(-2000px);
-            }
-        }
+             from {
+                 transform: translateY(0px);
+             }
+             to {
+                 transform: translateY(-2000px);
+             }
+         }
 
         .stars {
             background-color: transparent;
@@ -153,8 +154,35 @@ main {
                     background: #04c2c9;
                     border-color: #04c2c9;
 
+                    @-webkit-keyframes bounce {
+                        0%, 100% {
+                            top: 20px;
+                        }
+                        50% {
+                            top: 24px;
+                        }
+                    }
+                    @keyframes bounce {
+                        0%, 100% {
+                            top: 20px;
+                        }
+                        50% {
+                            top: 24px;
+                        }
+                    }
+
                     i {
                         transform: rotate(90deg);
+                        -webkit-animation-name: bounce;
+                        animation-name: bounce;
+                        -webkit-animation-duration: .6s;
+                        animation-duration: .6s;
+                        -webkit-animation-fill-mode: both;
+                        animation-fill-mode: both;
+                        -webkit-animation-timing-function: linear;
+                        animation-timing-function: linear;
+                        animation-iteration-count: infinite;
+                        -webkit-animation-iteration-count: infinite;
                     }
 
                 }
@@ -162,10 +190,10 @@ main {
         }
     }
 
-        .content {
-            width: 100%;
+    .content {
+        width: 100%;
 
-            section {
+        section {
                 padding: 65px 0;
                 position: relative;
                 width: 100%;
@@ -178,7 +206,7 @@ main {
                 }
             }
 
-            section#navMenu {
+        section#navMenu {
                 animation: popDown .5s;
                 background-color: $darkGray;
                 border-bottom: 3px solid #04C2C9;
@@ -207,7 +235,7 @@ main {
                     div.page-link {
                         margin: 0 20px;
                         cursor: pointer;
-                        transition: color .5s;
+                        transition: color .2s;
                         text-transform: uppercase;
                         font-size: 16pt;
 
@@ -218,12 +246,185 @@ main {
                 }
             }
 
-            section#about {
-                height: 600px;
-                background-color: mediumpurple;
+        section#about {
+            background-color: $lightGray;
+
+
+                .about__contentWrap {
+                    width: 100%;
+                    display: grid;
+                    grid-template-areas: 'about__photo about__bio'
+                                            'about__diagram about__diagram';
+                    //background-color: cadetblue;
+
+                    .about__photo {
+                        height: 400px;
+                        grid-area: about__photo;
+
+                        img {
+                            height: 100%;
+                        }
+                    }
+                    .about__bio {
+                        grid-area: about__bio;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 0 10%;
+                        font-size: 18pt;
+
+                        span {
+                            color: #ff5d36;
+                            font-weight: bold;
+
+                        }
+                    }
+                    .about__diagram {
+                        grid-area: about__diagram;
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        grid-template-rows: repeat(2, 1fr);
+                        //align-items: center;
+                        justify-items: center;
+                        @mixin donut-chart($name, $perc, $size, $width, $base, $center, $color, $textColor: $color, $textSize: 40px) {
+
+                            $color2: $color;
+                            $base2: $base;
+                            $deg: ($perc/100*360)+deg;
+                            $deg1: 90deg;
+                            $deg2: $deg;
+
+                            // If percentage is less than 50%
+                            @if $perc < 70 {
+                                $base: $color;
+                                $color: $base2;
+                                $color2: $base2;
+                                $deg1: ($perc/100*360+90)+deg;
+                                $deg2: 0deg;
+                            }
+
+                            .donut-chart {
+                                &#{$name} {
+                                    width: $size;
+                                    height: $size;
+                                    background: $base;
+
+                                    .slice {
+                                        &.one {
+                                            clip: rect(0 $size $size/2 0);
+                                            -webkit-transform: rotate($deg1);
+                                            transform: rotate($deg1);
+                                            background: $color;
+                                        }
+
+                                        &.two {
+                                            clip: rect(0 $size/2 $size 0);
+                                            -webkit-transform: rotate($deg2);
+                                            transform: rotate($deg2);
+                                            background: $color2;
+                                        }
+                                    }
+
+                                    .chart-center {
+                                        top: $width;
+                                        left: $width;
+                                        width: $size - ($width * 2);
+                                        height: $size - ($width * 2);
+                                        background: $center;
+
+                                        span {
+                                            font-size: $textSize;
+                                            line-height: $size - ($width * 2);
+                                            color: $textColor;
+
+                                            &:after {
+                                                content: '#{$perc}%';
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .card {
+                            background: #fff;
+                            padding: 20px;
+                            margin: 0 20px 0 0;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+
+                            .donut-chart {
+                                position: relative;
+                                border-radius: 50%;
+                                overflow: hidden;
+
+                                .slice {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+
+                                .chart-center {
+                                    position: absolute;
+                                    border-radius: 50%;
+
+                                    span {
+                                        display: block;
+                                        text-align: center;
+                                    }
+                                }
+                            }
+
+                            h2 {
+                                text-align: center;
+                                font-weight: bold;
+                                text-transform: uppercase;
+                                font-size: 18pt;
+                                margin: 20px 0;
+                            }
+                        }
+
+                        @include donut-chart('.chart_HTML', 91, 150px, 25px, #e1e1e1, #fff, #48b2c1);
+                        @include donut-chart('.chart_CSS', 87, 150px, 25px, #e1e1e1, #fff, #50c690);
+                        @include donut-chart('.chart_JS', 60, 150px, 25px, #e1e1e1, #fff, #f26a4a);
+                    }
+                }
             }
 
-            section#myProjects {
+        section#skills {
+            //display: none;
+
+            .skills__content {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                p {
+                    text-align: center;
+                    i {
+                        color: $blue;
+                        font-size: 3em;
+                        border: 4px solid $blue;
+                        padding: 20px;
+                        border-radius: 50%;
+                    }
+                }
+
+                h2 {
+                    font-weight: 800;
+                    font-size: 1.9rem
+                }
+                ul li {
+                    font-size: 22px;
+                }
+            }
+        }
+
+        section#myProjects {
                 background-color: $lightGray;
                 .gallery {
                     display: grid;
@@ -574,7 +775,7 @@ main {
                 }
             }
 
-            section#contactMe {
+        section#contactMe {
                 background: #252934;
                 position: relative;
                 padding-top: 95px;
@@ -643,9 +844,9 @@ main {
                     }
                 }
             }
-        }
-
     }
+
+}
 
 
 
