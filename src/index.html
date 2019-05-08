@@ -26,459 +26,550 @@
 </head>
 
 <body>
-
 	<main>
-
-		<div id="home">
-			<div class="stars" id="stars1"></div>
-			<div class="stars" id="stars2"></div>
-			<div class="stars" id="stars3"></div>
-
-				<div class="home-text">
-					<div class="home__greeting">
-						Hello <span>#username</span> <br>
-						I'm <span>Alex</span> - ultra shit web developer
-					</div>
-					<div class="home__button page-link" dest="about">
-						<span>view my work</span>
-						<i class="fas fa-arrow-right"></i>
-					</div>
-				</div>
-		</div>
 
 		<div class="content">
 
-			<section id="navMenu">
-				<nav class="link-wrap">
-					<div class="page-link" dest ='home'>home</div>
-					<div class="page-link" dest ='about'>about</div>
-					<div class="page-link" dest ='skills'>skills</div>
-					<div class="page-link" dest ='myProjects'>portfolio</div>
-					<div class="page-link" dest ='contactMe'>contact</div>
-				</nav>
-			</section>
+			<div class="modal-wrap">
+				<div class="mask"></div>
+				<div class="modal" id="modal">
+					<div class="galleryPopUp">
+						<div class="popUpContent">
+							<div class="slider">
+								<div class="owl-carousel">
+									<img src="https://bipbap.ru/wp-content/uploads/2017/06/tmb_145037_6611.jpg" alt="pic1">
+									<img src="img/gallery-images/weed.jpg" alt="pic3">
+								</div>
+							</div>
+							<div class="sliderDescription">
+								<h1>PROTO</h1>
+								<p>Lorem, ipsum dolor sit amet consectetur
+									adipisicing elit. Eligendi suscipit
+									praesentium minus delectus aut quaerat
+									libero alias temporibus, ut eum illum totam in
+									esse nihil animi et voluptas possimus modi.
+									Lorem ipsum dolor sit amet consectetur adipisicing
+									elit. Deleniti eum doloribus beatae ut quasi
+									cupiditate, sed molestiae dicta deserunt sequi nulla
+									, autem reprehenderit consectetur officiis iure
+									praesentium in consequuntur rerum?
+								</p>
+							</div>
+							<div class="popUpNav">
+								<a class="popUpLink" href="index.html">
+									<i class="fas fa-external-link-alt"></i>
+									<span>Let's see</span>
+									<i class="fas fa-angle-double-right"></i>
+								</a>
+								<a class="popUpClose">
+									<span class="popUpCloseSpan1"></span>
+									<span class="popUpCloseSpan2"></span>
+								</a>
+							</div>
+						</div>
 
-			<section id="about">
-				<div class="sectionTitle">About </div>
-				<div class="about__contentWrap">
-					<div class="about__photo">
-						<img src="img/my_photo.jpg" alt="my-photo">
-					</div>
-					<div class="about__bio">
-						<h1>
-							<span>SPOILER: typicall uninteresting description of the average web developer detected!</span>
-							<hr>
-							<br>
-							I love to create and build websites which are mobile-first ready,
-							fully responsive, minimal, and at the same time attractive
-							and user-friendly for individuals, startups, businesses etc.
-							<br>
-							<br>
-							I built my portfolio site from the grounds up by using all the skills that I know.
-							I'm always motivated and have the desire to learn more.
-							<br>
-							<br>
-							While I'm not debugging some code or trying to position elements right,
-							I love to playing music, video games, eating 'Mivina' or watching memes.
-						</h1>
 					</div>
 				</div>
-			</section>
+			</div>
 
-			<section id="skills">
-				<div class="sectionTitle">skills</div>
-				<div class="skills__content">
-						<div>
-							<p><i class="fas fa-code"></i></p>
-							<h2>Front End:</h2>
-							<ul>
-								<li>HTML</li>
-								<li>CSS</li>
-								<li>SASS/SCSS</li>
-								<li>JavaScript</li>
-								<li>JQuery</li>
-								<li>Bootstrap</li>
-							</ul>
-						</div>
-						<div>
-							<p><i class="fas fa-pencil-ruler"></i></p>
-							<h2>Design:</h2>
-							<ul>
-								<li>Photoshop</li>
-								<li>Illustrator</li>
-							</ul>
-						</div>
-						<div>
-							<p><i class="fas fa-hammer"></i></p>
-							<h2>Tools:</h2>
-							<ul>
-								<li>Git</li>
-								<li>Codepen</li>
-								<li>WebStorm</li>
-								<li></li>
-								<li>Terminal</li>
-							</ul>
-						</div>
+			<div id="home">
+				<div class="stars" id="stars1"></div>
+				<div class="stars" id="stars2"></div>
+				<div class="stars" id="stars3"></div>
+
+				<div class="home-text">
+					<div class="home__greeting">
+						<p class="string__animated--left">Hello <span>#username</span></p>
+						<p class="string__animated--right">I'm <span class="home__span--pink">Alex</span> - ultra shit web developer</p>
+					</div>
+					<br>
+					<div class="home__button page-link" dest="about">
+						<span>show more</span>
+						<i class="fas fa-arrow-right"></i>
+					</div>
 				</div>
-			</section>
+			</div>
+
+			<!--<section id="navMenu">-->
+				<!--<nav class="link-wrap">-->
+					<!--<div class="page-link" dest ='home'>home</div>-->
+					<!--<div class="page-link" dest ='about'>about</div>-->
+					<!--<div class="page-link" dest ='skills'>skills</div>-->
+					<!--<div class="page-link" dest ='myProjects'>portfolio</div>-->
+					<!--<div class="page-link" dest ='contactMe'>contact</div>-->
+				<!--</nav>-->
+			<!--</section>-->
+
+			<!--<section id="about">-->
+				<!--<div class="sectionTitle">About </div>-->
+				<!--<div class="about__contentWrap">-->
+					<!--<div class="about__photo">-->
+						<!--<img src="img/my_photo.jpg" alt="my-photo">-->
+					<!--</div>-->
+					<!--<div class="about__bio">-->
+						<!--<h1>-->
+							<!--<span>SPOILER: typicall uninteresting description of the average web developer detected!</span>-->
+							<!--<hr>-->
+							<!--<br>-->
+							<!--I love to create and build websites which are mobile-first ready,-->
+							<!--fully responsive, minimal, and at the same time attractive-->
+							<!--and user-friendly for individuals, startups, businesses etc.-->
+							<!--<br>-->
+							<!--<br>-->
+							<!--I built my portfolio site from the grounds up by using all the skills that I know.-->
+							<!--I'm always motivated and have the desire to learn more.-->
+							<!--<br>-->
+							<!--<br>-->
+							<!--While I'm not debugging some code or trying to position elements right,-->
+							<!--I love to composе music, play video games, eat 'Mivina' or watch memes.-->
+						<!--</h1>-->
+					<!--</div>-->
+				<!--</div>-->
+			<!--</section>-->
+
+			<!--<section id="skills">-->
+				<!--<div class="sectionTitle">skills</div>-->
+				<!--<div class="skills__content">-->
+						<!--<div>-->
+							<!--<p><i class="fas fa-code"></i></p>-->
+							<!--<h2>Front End:</h2>-->
+							<!--<ul>-->
+								<!--<li>HTML</li>-->
+								<!--<li>CSS</li>-->
+								<!--<li>SASS/SCSS</li>-->
+								<!--<li>JavaScript</li>-->
+								<!--<li>JQuery</li>-->
+								<!--<li>Bootstrap</li>-->
+							<!--</ul>-->
+						<!--</div>-->
+						<!--<div>-->
+							<!--<p><i class="fas fa-pencil-ruler"></i></p>-->
+							<!--<h2>Design:</h2>-->
+							<!--<ul>-->
+								<!--<li>Photoshop</li>-->
+								<!--<li>Illustrator</li>-->
+							<!--</ul>-->
+						<!--</div>-->
+						<!--<div>-->
+							<!--<p><i class="fas fa-hammer"></i></p>-->
+							<!--<h2>Tools:</h2>-->
+							<!--<ul>-->
+								<!--<li>Git</li>-->
+								<!--<li>Codepen</li>-->
+								<!--<li>WebStorm</li>-->
+								<!--<li></li>-->
+								<!--<li>Terminal</li>-->
+							<!--</ul>-->
+						<!--</div>-->
+				<!--</div>-->
+			<!--</section>-->
 
 			<section id="myProjects">
 				<div class="sectionTitle">PROJECTS</div>
+
 				<div class="gallery">
 
-					<div class="galleryItem">
-						<img src="img/gallery-images/weed.jpg" alt="sedona">
-						<div class="galleryInfo">
-							<h3>Sitename.com</h3>
-							<p>Pure shit...</p>
+					<div class="image">
+						<div class="projects projects-1"></div>
+						<div class="image-label">
+							<h3>sitename.com</h3>
 							<button>Learn more</button>
 						</div>
-						<div class="galleryPopUp">
-							<div class="popUpContent">
-
-								<div class="slider">
-									<div class="owl-carousel">
-										<img src="https://bipbap.ru/wp-content/uploads/2017/06/tmb_145037_6611.jpg" alt="pic1">
-										<img src="img/gallery-images/weed.jpg" alt="pic3">
-									</div>
-									<!--<div class="slider-nav">-->
-									<!--<button class="prevArrow" type="button">-->
-									<!--<i class="fas fa-angle-double-left"></i>-->
-									<!--</button>-->
-									<!--<button class="nextArrow" type="button">-->
-									<!--<i class="fas fa-angle-double-right"></i>-->
-									<!--</button>-->
-									<!--</div>-->
-								</div>
-
-								<div class="sliderDescription">
-									<h1>PROTO</h1>
-									<p>Lorem, ipsum dolor sit amet consectetur
-										adipisicing elit. Eligendi suscipit
-										praesentium minus delectus aut quaerat
-										libero alias temporibus, ut eum illum totam in
-										esse nihil animi et voluptas possimus modi.
-										Lorem ipsum dolor sit amet consectetur adipisicing
-										elit. Deleniti eum doloribus beatae ut quasi
-										cupiditate, sed molestiae dicta deserunt sequi nulla
-										, autem reprehenderit consectetur officiis iure
-										praesentium in consequuntur rerum?
-									</p>
-								</div>
-
-								<div class="popUpNav">
-
-									<a class="popUpLink" href="index.html">
-										<i class="fas fa-external-link-alt"></i>
-										<span>Let's see</span>
-										<i class="fas fa-angle-double-right"></i>
-									</a>
-
-									<a class="popUpClose">
-										<span class="popUpCloseSpan1"></span>
-										<span class="popUpCloseSpan2"></span>
-									</a>
-
-								</div>
-
-							</div>
-
-						</div>
 					</div>
 
-					<div class="galleryItem">
-						<img src="img/gallery-images/sedona.jpg" alt="sedona">
-						<div class="galleryInfo">
-							<h3>Sitename.com</h3>
-							<p>Pure shit...</p>
-							<button>Learn </button>
-						</div>
-						<div class="galleryPopUp">
-							<div class="popUpContent">
-
-								<div class="slider">
-									<div class="owl-carousel">
-										<img src="img/gallery-images/color.jpg" alt="pic1">
-										<img src="img/gallery-images/weed.jpg" alt="pic3">
-									</div>
-									<!--<div class="slider-nav">-->
-									<!--<button class="prevArrow" type="button">-->
-									<!--&lt;!&ndash;<i class="fas fa-angle-double-left"></i>&ndash;&gt;-->
-									<!--</button>-->
-									<!--<button class="nextArrow" type="button">-->
-									<!--&lt;!&ndash;<i class="fas fa-angle-double-right"></i>&ndash;&gt;-->
-									<!--</button>-->
-									<!--</div>-->
-								</div>
-
-								<div class="sliderDescription">
-									<h1>Sitename.com2222222</h1>
-									<p>Lorem, ipsum dolor sit amet consectetur
-										adipisicing elit. Eligendi suscipit
-										praesentium minus delectus aut quaerat
-										libero alias temporibus, ut eum illum totam in
-										esse nihil animi et voluptas possimus modi.
-										Lorem ipsum dolor sit amet consectetur adipisicing
-										elit. Deleniti eum doloribus beatae ut quasi
-										cupiditate, sed molestiae dicta deserunt sequi nulla
-										, autem reprehenderit consectetur officiis iure
-										praesentium in consequuntur rerum?
-									</p>
-								</div>
-
-								<div class="popUpNav">
-									<a class="popUpLink" href="index.html">
-										<i class="fas fa-external-link-alt"></i>
-										<span>Let's see</span>
-										<i class="fas fa-angle-double-right"></i>
-									</a>
-
-									<a class="popUpClose">
-										<span class="popUpCloseSpan1"></span>
-										<span class="popUpCloseSpan2"></span>
-									</a>
-								</div>
-
-							</div>
-
-						</div>
-					</div>
-
-					<div class="galleryItem">
-						<img src="img/gallery-images/color.jpg" alt="sedona">
-						<div class="galleryInfo">
-							<h3>Sitename.com</h3>
-							<p>Pure shit...</p>
+					<div class="image">
+						<div class="projects projects-2"></div>
+						<div class="image-label">
+							<h3>sitename.com</h3>
 							<button>Learn more</button>
 						</div>
-						<div class="galleryPopUp">
-							<div class="popUpContent">
-
-								<div class="slider">
-									<div class="owl-carousel">
-										<img src="https://bipbap.ru/wp-content/uploads/2017/06/tmb_145037_6611.jpg" alt="pic1">
-										<img src="img/gallery-images/weed.jpg" alt="pic3">
-									</div>
-									<!--<div class="slider-nav">-->
-									<!--<button class="prevArrow" type="button">-->
-									<!--<i class="fas fa-angle-double-left"></i>-->
-									<!--</button>-->
-									<!--<button class="nextArrow" type="button">-->
-									<!--<i class="fas fa-angle-double-right"></i>-->
-									<!--</button>-->
-									<!--</div>-->
-								</div>
-
-								<div class="sliderDescription">
-									<h1>PROTO</h1>
-									<p>Lorem, ipsum dolor sit amet consectetur
-										adipisicing elit. Eligendi suscipit
-										praesentium minus delectus aut quaerat
-										libero alias temporibus, ut eum illum totam in
-										esse nihil animi et voluptas possimus modi.
-										Lorem ipsum dolor sit amet consectetur adipisicing
-										elit. Deleniti eum doloribus beatae ut quasi
-										cupiditate, sed molestiae dicta deserunt sequi nulla
-										, autem reprehenderit consectetur officiis iure
-										praesentium in consequuntur rerum?
-									</p>
-								</div>
-
-								<div class="popUpNav">
-
-									<a class="popUpLink" href="index.html">
-										<i class="fas fa-external-link-alt"></i>
-										<span>Let's see</span>
-										<i class="fas fa-angle-double-right"></i>
-									</a>
-
-									<a class="popUpClose">
-										<span class="popUpCloseSpan1"></span>
-										<span class="popUpCloseSpan2"></span>
-									</a>
-
-								</div>
-
-							</div>
-
-						</div>
 					</div>
 
-					<div class="galleryItem">
-						<img src="img/gallery-images/gameart.jpg" alt="sedona">
-						<div class="galleryInfo">
-							<h3>Sitename.com</h3>
-							<p>Pure shit...</p>
-							<button>Learn </button>
-						</div>
-						<div class="galleryPopUp">
-							<div class="popUpContent">
-
-								<div class="slider">
-									<div class="owl-carousel">
-										<img src="img/gallery-images/color.jpg" alt="pic1">
-										<img src="img/gallery-images/weed.jpg" alt="pic3">
-									</div>
-									<!--<div class="slider-nav">-->
-									<!--<button class="prevArrow" type="button">-->
-									<!--&lt;!&ndash;<i class="fas fa-angle-double-left"></i>&ndash;&gt;-->
-									<!--</button>-->
-									<!--<button class="nextArrow" type="button">-->
-									<!--&lt;!&ndash;<i class="fas fa-angle-double-right"></i>&ndash;&gt;-->
-									<!--</button>-->
-									<!--</div>-->
-								</div>
-
-								<div class="sliderDescription">
-									<h1>Sitename.com2222222</h1>
-									<p>Lorem, ipsum dolor sit amet consectetur
-										adipisicing elit. Eligendi suscipit
-										praesentium minus delectus aut quaerat
-										libero alias temporibus, ut eum illum totam in
-										esse nihil animi et voluptas possimus modi.
-										Lorem ipsum dolor sit amet consectetur adipisicing
-										elit. Deleniti eum doloribus beatae ut quasi
-										cupiditate, sed molestiae dicta deserunt sequi nulla
-										, autem reprehenderit consectetur officiis iure
-										praesentium in consequuntur rerum?
-									</p>
-								</div>
-
-								<div class="popUpNav">
-									<a class="popUpLink" href="index.html">
-										<i class="fas fa-external-link-alt"></i>
-										<span>Let's see</span>
-										<i class="fas fa-angle-double-right"></i>
-									</a>
-
-									<a class="popUpClose">
-										<span class="popUpCloseSpan1"></span>
-										<span class="popUpCloseSpan2"></span>
-									</a>
-								</div>
-
-							</div>
-
-						</div>
-					</div>
-
-					<div class="galleryItem">
-						<img src="img/gallery-images/lake.jpg" alt="sedona">
-						<div class="galleryInfo">
-							<h3>Sitename.com</h3>
-							<p>Pure shit...</p>
+					<div class="image">
+						<div class="projects projects-3"></div>
+						<div class="image-label">
+							<h3>sitename.com</h3>
 							<button>Learn more</button>
 						</div>
-						<div class="galleryPopUp">
-							<div class="popUpContent">
+					</div>
 
-								<div class="slider">
-									<div class="owl-carousel">
-										<img src="https://bipbap.ru/wp-content/uploads/2017/06/tmb_145037_6611.jpg" alt="pic1">
-										<img src="img/gallery-images/weed.jpg" alt="pic3">
-									</div>
-									<!--<div class="slider-nav">-->
-									<!--<button class="prevArrow" type="button">-->
-									<!--<i class="fas fa-angle-double-left"></i>-->
-									<!--</button>-->
-									<!--<button class="nextArrow" type="button">-->
-									<!--<i class="fas fa-angle-double-right"></i>-->
-									<!--</button>-->
-									<!--</div>-->
-								</div>
-
-								<div class="sliderDescription">
-									<h1>PROTO</h1>
-									<p>Lorem, ipsum dolor sit amet consectetur
-										adipisicing elit. Eligendi suscipit
-										praesentium minus delectus aut quaerat
-										libero alias temporibus, ut eum illum totam in
-										esse nihil animi et voluptas possimus modi.
-										Lorem ipsum dolor sit amet consectetur adipisicing
-										elit. Deleniti eum doloribus beatae ut quasi
-										cupiditate, sed molestiae dicta deserunt sequi nulla
-										, autem reprehenderit consectetur officiis iure
-										praesentium in consequuntur rerum?
-									</p>
-								</div>
-
-								<div class="popUpNav">
-
-									<a class="popUpLink" href="index.html">
-										<i class="fas fa-external-link-alt"></i>
-										<span>Let's see</span>
-										<i class="fas fa-angle-double-right"></i>
-									</a>
-
-									<a class="popUpClose">
-										<span class="popUpCloseSpan1"></span>
-										<span class="popUpCloseSpan2"></span>
-									</a>
-
-								</div>
-
-							</div>
-
+					<div class="image">
+						<div class="projects projects-4"></div>
+						<div class="image-label">
+							<h3>sitename.com</h3>
+							<button>Learn more</button>
 						</div>
 					</div>
 
-					<div class="galleryItem">
-						<img src="img/gallery-images/color.jpg" alt="sedona">
-						<div class="galleryInfo">
-							<h3>Sitename.com</h3>
-							<p>Pure shit...</p>
-							<button>Learn </button>
+					<div class="image">
+						<div class="projects projects-5"></div>
+						<div class="image-label">
+							<h3>sitename.com</h3>
+							<button>Learn more</button>
 						</div>
-						<div class="galleryPopUp">
-							<div class="popUpContent">
+					</div>
 
-								<div class="slider">
-									<div class="owl-carousel">
-										<img src="img/gallery-images/color.jpg" alt="pic1">
-										<img src="img/gallery-images/weed.jpg" alt="pic3">
-									</div>
-									<!--<div class="slider-nav">-->
-									<!--<button class="prevArrow" type="button">-->
+					<div class="image">
+						<div class="projects projects-6"></div>
+						<div class="image-label">
+							<h3>sitename.com</h3>
+							<button>Learn more</button>
+						</div>
+					</div>
+
+					<!--<div class="galleryItem">-->
+						<!--<img src="img/gallery-images/weed.jpg" alt="sedona">-->
+						<!--<div class="galleryInfo">-->
+							<!--<h3>Sitename.com</h3>-->
+							<!--<p>Pure shit...</p>-->
+							<!--<button>Learn more</button>-->
+						<!--</div>-->
+						<!--<div class="galleryPopUp">-->
+							<!--<div class="popUpContent">-->
+
+								<!--<div class="slider">-->
+									<!--<div class="owl-carousel">-->
+										<!--<img src="https://bipbap.ru/wp-content/uploads/2017/06/tmb_145037_6611.jpg" alt="pic1">-->
+										<!--<img src="img/gallery-images/weed.jpg" alt="pic3">-->
+									<!--</div>-->
+									<!--&lt;!&ndash;<div class="slider-nav">&ndash;&gt;-->
+									<!--&lt;!&ndash;<button class="prevArrow" type="button">&ndash;&gt;-->
 									<!--&lt;!&ndash;<i class="fas fa-angle-double-left"></i>&ndash;&gt;-->
-									<!--</button>-->
-									<!--<button class="nextArrow" type="button">-->
+									<!--&lt;!&ndash;</button>&ndash;&gt;-->
+									<!--&lt;!&ndash;<button class="nextArrow" type="button">&ndash;&gt;-->
 									<!--&lt;!&ndash;<i class="fas fa-angle-double-right"></i>&ndash;&gt;-->
-									<!--</button>-->
+									<!--&lt;!&ndash;</button>&ndash;&gt;-->
+									<!--&lt;!&ndash;</div>&ndash;&gt;-->
+								<!--</div>-->
+
+								<!--<div class="sliderDescription">-->
+									<!--<h1>PROTO</h1>-->
+									<!--<p>Lorem, ipsum dolor sit amet consectetur-->
+										<!--adipisicing elit. Eligendi suscipit-->
+										<!--praesentium minus delectus aut quaerat-->
+										<!--libero alias temporibus, ut eum illum totam in-->
+										<!--esse nihil animi et voluptas possimus modi.-->
+										<!--Lorem ipsum dolor sit amet consectetur adipisicing-->
+										<!--elit. Deleniti eum doloribus beatae ut quasi-->
+										<!--cupiditate, sed molestiae dicta deserunt sequi nulla-->
+										<!--, autem reprehenderit consectetur officiis iure-->
+										<!--praesentium in consequuntur rerum?-->
+									<!--</p>-->
+								<!--</div>-->
+
+								<!--<div class="popUpNav">-->
+
+									<!--<a class="popUpLink" href="index.html">-->
+										<!--<i class="fas fa-external-link-alt"></i>-->
+										<!--<span>Let's see</span>-->
+										<!--<i class="fas fa-angle-double-right"></i>-->
+									<!--</a>-->
+
+									<!--<a class="popUpClose">-->
+										<!--<span class="popUpCloseSpan1"></span>-->
+										<!--<span class="popUpCloseSpan2"></span>-->
+									<!--</a>-->
+
+								<!--</div>-->
+
+							<!--</div>-->
+
+						<!--</div>-->
+					<!--</div>-->
+
+					<!--<div class="galleryItem">-->
+						<!--<img src="img/gallery-images/sedona.jpg" alt="sedona">-->
+						<!--<div class="galleryInfo">-->
+							<!--<h3>Sitename.com</h3>-->
+							<!--<p>Pure shit...</p>-->
+							<!--<button>Learn </button>-->
+						<!--</div>-->
+						<!--<div class="galleryPopUp">-->
+							<!--<div class="popUpContent">-->
+
+								<!--<div class="slider">-->
+									<!--<div class="owl-carousel">-->
+										<!--<img src="img/gallery-images/color.jpg" alt="pic1">-->
+										<!--<img src="img/gallery-images/weed.jpg" alt="pic3">-->
 									<!--</div>-->
-								</div>
+									<!--&lt;!&ndash;<div class="slider-nav">&ndash;&gt;-->
+									<!--&lt;!&ndash;<button class="prevArrow" type="button">&ndash;&gt;-->
+									<!--&lt;!&ndash;&lt;!&ndash;<i class="fas fa-angle-double-left"></i>&ndash;&gt;&ndash;&gt;-->
+									<!--&lt;!&ndash;</button>&ndash;&gt;-->
+									<!--&lt;!&ndash;<button class="nextArrow" type="button">&ndash;&gt;-->
+									<!--&lt;!&ndash;&lt;!&ndash;<i class="fas fa-angle-double-right"></i>&ndash;&gt;&ndash;&gt;-->
+									<!--&lt;!&ndash;</button>&ndash;&gt;-->
+									<!--&lt;!&ndash;</div>&ndash;&gt;-->
+								<!--</div>-->
 
-								<div class="sliderDescription">
-									<h1>Sitename.com2222222</h1>
-									<p>Lorem, ipsum dolor sit amet consectetur
-										adipisicing elit. Eligendi suscipit
-										praesentium minus delectus aut quaerat
-										libero alias temporibus, ut eum illum totam in
-										esse nihil animi et voluptas possimus modi.
-										Lorem ipsum dolor sit amet consectetur adipisicing
-										elit. Deleniti eum doloribus beatae ut quasi
-										cupiditate, sed molestiae dicta deserunt sequi nulla
-										, autem reprehenderit consectetur officiis iure
-										praesentium in consequuntur rerum?
-									</p>
-								</div>
+								<!--<div class="sliderDescription">-->
+									<!--<h1>Sitename.com2222222</h1>-->
+									<!--<p>Lorem, ipsum dolor sit amet consectetur-->
+										<!--adipisicing elit. Eligendi suscipit-->
+										<!--praesentium minus delectus aut quaerat-->
+										<!--libero alias temporibus, ut eum illum totam in-->
+										<!--esse nihil animi et voluptas possimus modi.-->
+										<!--Lorem ipsum dolor sit amet consectetur adipisicing-->
+										<!--elit. Deleniti eum doloribus beatae ut quasi-->
+										<!--cupiditate, sed molestiae dicta deserunt sequi nulla-->
+										<!--, autem reprehenderit consectetur officiis iure-->
+										<!--praesentium in consequuntur rerum?-->
+									<!--</p>-->
+								<!--</div>-->
 
-								<div class="popUpNav">
-									<a class="popUpLink" href="index.html">
-										<i class="fas fa-external-link-alt"></i>
-										<span>Let's see</span>
-										<i class="fas fa-angle-double-right"></i>
-									</a>
+								<!--<div class="popUpNav">-->
+									<!--<a class="popUpLink" href="index.html">-->
+										<!--<i class="fas fa-external-link-alt"></i>-->
+										<!--<span>Let's see</span>-->
+										<!--<i class="fas fa-angle-double-right"></i>-->
+									<!--</a>-->
 
-									<a class="popUpClose">
-										<span class="popUpCloseSpan1"></span>
-										<span class="popUpCloseSpan2"></span>
-									</a>
-								</div>
+									<!--<a class="popUpClose">-->
+										<!--<span class="popUpCloseSpan1"></span>-->
+										<!--<span class="popUpCloseSpan2"></span>-->
+									<!--</a>-->
+								<!--</div>-->
 
-							</div>
+							<!--</div>-->
 
-						</div>
-					</div>
+						<!--</div>-->
+					<!--</div>-->
+
+					<!--<div class="galleryItem">-->
+						<!--<img src="img/gallery-images/color.jpg" alt="sedona">-->
+						<!--<div class="galleryInfo">-->
+							<!--<h3>Sitename.com</h3>-->
+							<!--<p>Pure shit...</p>-->
+							<!--<button>Learn more</button>-->
+						<!--</div>-->
+						<!--<div class="galleryPopUp">-->
+							<!--<div class="popUpContent">-->
+
+								<!--<div class="slider">-->
+									<!--<div class="owl-carousel">-->
+										<!--<img src="https://bipbap.ru/wp-content/uploads/2017/06/tmb_145037_6611.jpg" alt="pic1">-->
+										<!--<img src="img/gallery-images/weed.jpg" alt="pic3">-->
+									<!--</div>-->
+									<!--&lt;!&ndash;<div class="slider-nav">&ndash;&gt;-->
+									<!--&lt;!&ndash;<button class="prevArrow" type="button">&ndash;&gt;-->
+									<!--&lt;!&ndash;<i class="fas fa-angle-double-left"></i>&ndash;&gt;-->
+									<!--&lt;!&ndash;</button>&ndash;&gt;-->
+									<!--&lt;!&ndash;<button class="nextArrow" type="button">&ndash;&gt;-->
+									<!--&lt;!&ndash;<i class="fas fa-angle-double-right"></i>&ndash;&gt;-->
+									<!--&lt;!&ndash;</button>&ndash;&gt;-->
+									<!--&lt;!&ndash;</div>&ndash;&gt;-->
+								<!--</div>-->
+
+								<!--<div class="sliderDescription">-->
+									<!--<h1>PROTO</h1>-->
+									<!--<p>Lorem, ipsum dolor sit amet consectetur-->
+										<!--adipisicing elit. Eligendi suscipit-->
+										<!--praesentium minus delectus aut quaerat-->
+										<!--libero alias temporibus, ut eum illum totam in-->
+										<!--esse nihil animi et voluptas possimus modi.-->
+										<!--Lorem ipsum dolor sit amet consectetur adipisicing-->
+										<!--elit. Deleniti eum doloribus beatae ut quasi-->
+										<!--cupiditate, sed molestiae dicta deserunt sequi nulla-->
+										<!--, autem reprehenderit consectetur officiis iure-->
+										<!--praesentium in consequuntur rerum?-->
+									<!--</p>-->
+								<!--</div>-->
+
+								<!--<div class="popUpNav">-->
+
+									<!--<a class="popUpLink" href="index.html">-->
+										<!--<i class="fas fa-external-link-alt"></i>-->
+										<!--<span>Let's see</span>-->
+										<!--<i class="fas fa-angle-double-right"></i>-->
+									<!--</a>-->
+
+									<!--<a class="popUpClose">-->
+										<!--<span class="popUpCloseSpan1"></span>-->
+										<!--<span class="popUpCloseSpan2"></span>-->
+									<!--</a>-->
+
+								<!--</div>-->
+
+							<!--</div>-->
+
+						<!--</div>-->
+					<!--</div>-->
+
+					<!--<div class="galleryItem">-->
+						<!--<img src="img/gallery-images/gameart.jpg" alt="sedona">-->
+						<!--<div class="galleryInfo">-->
+							<!--<h3>Sitename.com</h3>-->
+							<!--<p>Pure shit...</p>-->
+							<!--<button>Learn </button>-->
+						<!--</div>-->
+						<!--<div class="galleryPopUp">-->
+							<!--<div class="popUpContent">-->
+
+								<!--<div class="slider">-->
+									<!--<div class="owl-carousel">-->
+										<!--<img src="img/gallery-images/color.jpg" alt="pic1">-->
+										<!--<img src="img/gallery-images/weed.jpg" alt="pic3">-->
+									<!--</div>-->
+									<!--&lt;!&ndash;<div class="slider-nav">&ndash;&gt;-->
+									<!--&lt;!&ndash;<button class="prevArrow" type="button">&ndash;&gt;-->
+									<!--&lt;!&ndash;&lt;!&ndash;<i class="fas fa-angle-double-left"></i>&ndash;&gt;&ndash;&gt;-->
+									<!--&lt;!&ndash;</button>&ndash;&gt;-->
+									<!--&lt;!&ndash;<button class="nextArrow" type="button">&ndash;&gt;-->
+									<!--&lt;!&ndash;&lt;!&ndash;<i class="fas fa-angle-double-right"></i>&ndash;&gt;&ndash;&gt;-->
+									<!--&lt;!&ndash;</button>&ndash;&gt;-->
+									<!--&lt;!&ndash;</div>&ndash;&gt;-->
+								<!--</div>-->
+
+								<!--<div class="sliderDescription">-->
+									<!--<h1>Sitename.com2222222</h1>-->
+									<!--<p>Lorem, ipsum dolor sit amet consectetur-->
+										<!--adipisicing elit. Eligendi suscipit-->
+										<!--praesentium minus delectus aut quaerat-->
+										<!--libero alias temporibus, ut eum illum totam in-->
+										<!--esse nihil animi et voluptas possimus modi.-->
+										<!--Lorem ipsum dolor sit amet consectetur adipisicing-->
+										<!--elit. Deleniti eum doloribus beatae ut quasi-->
+										<!--cupiditate, sed molestiae dicta deserunt sequi nulla-->
+										<!--, autem reprehenderit consectetur officiis iure-->
+										<!--praesentium in consequuntur rerum?-->
+									<!--</p>-->
+								<!--</div>-->
+
+								<!--<div class="popUpNav">-->
+									<!--<a class="popUpLink" href="index.html">-->
+										<!--<i class="fas fa-external-link-alt"></i>-->
+										<!--<span>Let's see</span>-->
+										<!--<i class="fas fa-angle-double-right"></i>-->
+									<!--</a>-->
+
+									<!--<a class="popUpClose">-->
+										<!--<span class="popUpCloseSpan1"></span>-->
+										<!--<span class="popUpCloseSpan2"></span>-->
+									<!--</a>-->
+								<!--</div>-->
+
+							<!--</div>-->
+
+						<!--</div>-->
+					<!--</div>-->
+
+					<!--<div class="galleryItem">-->
+						<!--<img src="img/gallery-images/lake.jpg" alt="sedona">-->
+						<!--<div class="galleryInfo">-->
+							<!--<h3>Sitename.com</h3>-->
+							<!--<p>Pure shit...</p>-->
+							<!--<button>Learn more</button>-->
+						<!--</div>-->
+						<!--<div class="galleryPopUp">-->
+							<!--<div class="popUpContent">-->
+
+								<!--<div class="slider">-->
+									<!--<div class="owl-carousel">-->
+										<!--<img src="https://bipbap.ru/wp-content/uploads/2017/06/tmb_145037_6611.jpg" alt="pic1">-->
+										<!--<img src="img/gallery-images/weed.jpg" alt="pic3">-->
+									<!--</div>-->
+									<!--&lt;!&ndash;<div class="slider-nav">&ndash;&gt;-->
+									<!--&lt;!&ndash;<button class="prevArrow" type="button">&ndash;&gt;-->
+									<!--&lt;!&ndash;<i class="fas fa-angle-double-left"></i>&ndash;&gt;-->
+									<!--&lt;!&ndash;</button>&ndash;&gt;-->
+									<!--&lt;!&ndash;<button class="nextArrow" type="button">&ndash;&gt;-->
+									<!--&lt;!&ndash;<i class="fas fa-angle-double-right"></i>&ndash;&gt;-->
+									<!--&lt;!&ndash;</button>&ndash;&gt;-->
+									<!--&lt;!&ndash;</div>&ndash;&gt;-->
+								<!--</div>-->
+
+								<!--<div class="sliderDescription">-->
+									<!--<h1>PROTO</h1>-->
+									<!--<p>Lorem, ipsum dolor sit amet consectetur-->
+										<!--adipisicing elit. Eligendi suscipit-->
+										<!--praesentium minus delectus aut quaerat-->
+										<!--libero alias temporibus, ut eum illum totam in-->
+										<!--esse nihil animi et voluptas possimus modi.-->
+										<!--Lorem ipsum dolor sit amet consectetur adipisicing-->
+										<!--elit. Deleniti eum doloribus beatae ut quasi-->
+										<!--cupiditate, sed molestiae dicta deserunt sequi nulla-->
+										<!--, autem reprehenderit consectetur officiis iure-->
+										<!--praesentium in consequuntur rerum?-->
+									<!--</p>-->
+								<!--</div>-->
+
+								<!--<div class="popUpNav">-->
+
+									<!--<a class="popUpLink" href="index.html">-->
+										<!--<i class="fas fa-external-link-alt"></i>-->
+										<!--<span>Let's see</span>-->
+										<!--<i class="fas fa-angle-double-right"></i>-->
+									<!--</a>-->
+
+									<!--<a class="popUpClose">-->
+										<!--<span class="popUpCloseSpan1"></span>-->
+										<!--<span class="popUpCloseSpan2"></span>-->
+									<!--</a>-->
+
+								<!--</div>-->
+
+							<!--</div>-->
+
+						<!--</div>-->
+					<!--</div>-->
+
+					<!--<div class="galleryItem">-->
+						<!--<img src="img/gallery-images/color.jpg" alt="sedona">-->
+						<!--<div class="galleryInfo">-->
+							<!--<h3>Sitename.com</h3>-->
+							<!--<p>Pure shit...</p>-->
+							<!--<button>Learn </button>-->
+						<!--</div>-->
+						<!--<div class="galleryPopUp">-->
+							<!--<div class="popUpContent">-->
+
+								<!--<div class="slider">-->
+									<!--<div class="owl-carousel">-->
+										<!--<img src="img/gallery-images/color.jpg" alt="pic1">-->
+										<!--<img src="img/gallery-images/weed.jpg" alt="pic3">-->
+									<!--</div>-->
+									<!--&lt;!&ndash;<div class="slider-nav">&ndash;&gt;-->
+									<!--&lt;!&ndash;<button class="prevArrow" type="button">&ndash;&gt;-->
+									<!--&lt;!&ndash;&lt;!&ndash;<i class="fas fa-angle-double-left"></i>&ndash;&gt;&ndash;&gt;-->
+									<!--&lt;!&ndash;</button>&ndash;&gt;-->
+									<!--&lt;!&ndash;<button class="nextArrow" type="button">&ndash;&gt;-->
+									<!--&lt;!&ndash;&lt;!&ndash;<i class="fas fa-angle-double-right"></i>&ndash;&gt;&ndash;&gt;-->
+									<!--&lt;!&ndash;</button>&ndash;&gt;-->
+									<!--&lt;!&ndash;</div>&ndash;&gt;-->
+								<!--</div>-->
+
+								<!--<div class="sliderDescription">-->
+									<!--<h1>Sitename.com2222222</h1>-->
+									<!--<p>Lorem, ipsum dolor sit amet consectetur-->
+										<!--adipisicing elit. Eligendi suscipit-->
+										<!--praesentium minus delectus aut quaerat-->
+										<!--libero alias temporibus, ut eum illum totam in-->
+										<!--esse nihil animi et voluptas possimus modi.-->
+										<!--Lorem ipsum dolor sit amet consectetur adipisicing-->
+										<!--elit. Deleniti eum doloribus beatae ut quasi-->
+										<!--cupiditate, sed molestiae dicta deserunt sequi nulla-->
+										<!--, autem reprehenderit consectetur officiis iure-->
+										<!--praesentium in consequuntur rerum?-->
+									<!--</p>-->
+								<!--</div>-->
+
+								<!--<div class="popUpNav">-->
+									<!--<a class="popUpLink" href="index.html">-->
+										<!--<i class="fas fa-external-link-alt"></i>-->
+										<!--<span>Let's see</span>-->
+										<!--<i class="fas fa-angle-double-right"></i>-->
+									<!--</a>-->
+
+									<!--<a class="popUpClose">-->
+										<!--<span class="popUpCloseSpan1"></span>-->
+										<!--<span class="popUpCloseSpan2"></span>-->
+									<!--</a>-->
+								<!--</div>-->
+
+							<!--</div>-->
+
+						<!--</div>-->
+					<!--</div>-->
 
 
 				</div>

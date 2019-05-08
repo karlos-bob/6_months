@@ -18,13 +18,50 @@
 	color: #fff;
 }
 
+//---
+//SCROLLBAR STYLES
+//---
+::-webkit-scrollbar {
+  width: 13px;
+  height: 13px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: $lightBlue;
+  border: 0px none #ffffff;
+
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #387be1;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #2a61ea;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  //border: 0 none #ffffff;
+}
+::-webkit-scrollbar-track:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-track:active {
+  background: $lightGray;
+
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+
 html, body {
   height: 100%;
   scroll-behavior: smooth;
 }
 
 body {
-  //font-family: "raleway-regular";
 	font-size: 16px;
 	min-width: 320px;
 	position: relative;
@@ -81,7 +118,14 @@ footer {
 	justify-content: center;
 }
 
+.content > .modal-wrap.visible {
+  pointer-events: initial;
+}
 
+.content > .modal-wrap.visible .mask {
+  transform: scale(1);
+  opacity: 1;
+}
 
 footer {
 	background-color: $darkGray;

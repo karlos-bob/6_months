@@ -8,6 +8,7 @@ $textGray: #8F9AA7;
 
 $pink: #E31B6D;
 $blue: #04c2c9;
+$lightBlue: #0b93ee;
 
 // Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
 $grid-gutter-width: 30px;
@@ -27,7 +28,7 @@ $gutter: $grid-gutter-width;
     text-transform: uppercase;
     color: $titles;
     position: relative;
-    margin: 0 0 25px 0;  
+    margin: 0 0 35px 0;
 
     &:after {
         content: '';
