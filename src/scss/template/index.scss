@@ -15,6 +15,10 @@ main {
             position: fixed;
             pointer-events: none;
             z-index: 999999999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
             .mask {
                 height: 100%;
@@ -27,24 +31,235 @@ main {
                 opacity: 0;
             }
 
-
-
             .modal {
                 background: #fff;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
                 position: relative;
                 transition: all .3s;
                 transform: scale(0.8);
-                opacity: 0;
+                opacity: 0; //ПЕРЕКЛЮЧИТЬ ПОСЛЕ ОТЛАДКИ
                 align-items: flex-start;
                 text-align: left;
                 box-sizing: border-box;
                 color: #333;
-                top: -6vh;
+                top: -12vh;
                 height: initial;
-                display: none;
+                max-width: 800px;
+
+                .carousel-wrap {
+                    position: relative;
+                    background-color: #fff;
+
+                    .carousel-window {
+                        overflow: hidden;
+                        height: 450px;
+                        position: relative;
+
+                        #carousel {
+                            width: 10000px;
+                            position: relative;
+                            top: 0;
+                            height: 100%;
+
+                            .slide {
+                                cursor: pointer;
+                                float: left;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+
+                        .carousel-navigation {
+                            width: 100%;
+                            position: absolute;
+                            bottom: 0;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            z-index: 200000;
+
+                            i {
+                                width: 64px;
+                                height: 54px;
+                                border: none;
+                                background: rgba(0, 0, 0, 0.3);
+                                color: #fff;
+                                cursor: pointer;
+                                -moz-appearance: none !important;
+                                -webkit-appearance: none !important;
+                                -webkit-user-select: none;
+                                -moz-user-select: none;
+                                -ms-user-select: none;
+                                -o-user-select: none;
+                                user-select: none;
+                                transition: all ease-out .2s !important;
+                                text-align: center;
+                                padding-top: 22px;
+
+                                &::-moz-focus-outer, &::-moz-focus-inner {
+                                    border: 0;
+                                }
+
+                                &:focus {
+                                    outline: 0;
+                                }
+                                &:active {
+                                    font-size: 17pt;
+                                    padding-top: 18px;
+                                    transition: .2s !important;
+                                }
+                            }
+                        }
+                    }
+                    .carousel-info {
+                        padding: 35px 35px 25px;
+                        border-top: 3px solid #1B242F;
+                        box-sizing: border-box;
+                        color: #444;
+
+                        .title {
+                            font-size: 22pt;
+                            line-height: 30pt;
+                            font-weight: bold;
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                        }
+
+                        .detail {
+                            font-size: 16pt;
+                            line-height: 18pt;
+                            margin-top: 15px;
+                        }
+
+                        .info-buttons {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            padding-top: 35px;
+                            padding-bottom: 15px;
+                            &:hover a {
+                                cursor: pointer;
+                            }
+
+                            a.popUpLink {
+                                display: block;
+                                position: relative;
+                                font-weight: bold;
+                                margin: 0;
+                                padding: 8px 0;
+                                height: 50px;
+                                color: #fff;
+                                background-color: $blue;
+                                text-transform: uppercase;
+                                text-decoration: none;
+                                text-align: center;
+                                border: 2px solid $blue;
+                                width: 170px;
+                                font-size: 13pt;
+                                transition: all .3s;
+                                cursor: pointer;
+
+                                i {
+                                    position: absolute;
+                                }
+
+                                i.fa-external-link-alt {
+
+                                    top: 13px;
+                                    display: inline;
+                                    left: 8px;
+                                }
+                                i.fa-angle-double-right {
+                                    top: 16px;
+                                    // right: 2px;
+                                    opacity: 0;
+                                    // transition: 0.5s steps(2);
+                                    // &:target {
+                                    //     margin-left: 16px;
+                                    // }
+
+                                }
+
+                                &:hover {
+                                    background-color: #fff;
+                                    color: #000;
+
+                                    i.fa-external-link-alt {
+                                        // transition: all .4s;
+                                        display: none;
+
+                                    }
+
+                                    i.fa-angle-double-right {
+                                        @keyframes go-left-right {
+                                            from {
+                                                right: 10px;
+                                            }
+                                            to {
+                                                right: 15px;
+                                            }
+                                        }
+                                        @-webkit-keyframes go-left-right {
+                                            from {
+                                                right: 10px;
+                                            }
+                                            to {
+                                                right: 15px;
+                                            }
+                                        }
+                                        opacity: 1;
+                                        animation: go-left-right .370s infinite alternate;
+                                        -webkit-animation: go-left-right .370s infinite alternate;
+
+                                    }
+                                }
+                            }
+                            a.popUpClose {
+                                width: 80px;
+                                height: 50px;
+                                margin: 0;
+                                position: relative;
+
+                                span::after {
+                                    position: absolute;
+                                    content: '';
+                                    display: block;
+                                    background-color: #bbb;
+                                    height: 5px;
+                                    width: 40px;
+                                    margin-bottom: 5px;
+                                    border-radius: 4px;
+                                    top: 20px;
+                                    right: 20px;
+                                    transition: all .4s;
+                                }
+
+                                span.popUpCloseSpan1::after {
+                                    transform: rotate(40deg);
+                                }
+
+                                span.popUpCloseSpan2::after {
+                                    transform: rotate(-40deg);
+                                }
+
+                                &:hover .popUpCloseSpan1::after {
+                                    transform: rotate(400deg);
+                                }
+
+                                &:hover .popUpCloseSpan2::after {
+                                    transform: rotate(320deg);
+                                }
+                            }
+
+                        }
+                    }
+                }
             }
         }
+
 
         #home {
             position: relative;
@@ -1002,6 +1217,7 @@ main {
                                 font-size: 22pt;
                                 font-family: "raleway-bold", sans-serif;
                             }
+
                             button {
                                 color: #fff;
                                 background-color: inherit;
@@ -1011,15 +1227,13 @@ main {
                                 border: 3px solid $lightBlue;
                                 width: 170px;
                                 font-size: 13pt;
-                                //font-weight: bold;
                                 padding: 7px 0;
                                 cursor: pointer;
 
-                                &:hover {
-                                    background-color: $lightBlue;
+                                    &:hover {
+                                        background-color: $lightBlue;
+                                    }
                                 }
-                            }
-
                         }
 
                         .galleryPopUp {
@@ -1126,11 +1340,9 @@ main {
                                         margin-top: 15px;
                                     }
                                 }
-
                                 .popUpNav, .sliderDescription {
                                     padding: 0 35px;
                                 }
-
                                 .popUpNav {
                                     width: 100%;
                                     display: flex;
@@ -1249,10 +1461,10 @@ main {
 
                         //BACKGROUND_IMAGES
                         .projects-1 {
-                            background-image: url(../img/gallery-images/sedona.jpg);
+                            background-image: url(../img/gallery-images/gameart.jpg);
                         }
                         .projects-2 {
-                            background-image: url(../img/gallery-images/sedona.jpg);
+                            background-image: url(../img/gallery-images/cow.jpg);
                         }
                         .projects-3 {
                             background-image: url(../img/gallery-images/sedona.jpg);

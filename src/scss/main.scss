@@ -121,8 +121,8 @@ footer {
 .content > .modal-wrap.visible {
   pointer-events: initial;
 }
-
-.content > .modal-wrap.visible .mask {
+.content > .modal-wrap.visible .mask,
+.content > .modal-wrap.visible .modal {
   transform: scale(1);
   opacity: 1;
 }
