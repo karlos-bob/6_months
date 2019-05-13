@@ -9,7 +9,7 @@ $(document).ready(function(){
             link: 'http://www.roambi.com'
         },
         portfolio_2: {
-            title: 'Roambi.com',
+            title: 'Xuyambi.com',
             detail: 'Roambi provides analytics, reporting, and business intelligence for companies' +
             ' to use on the go. A Wordpress hosted site written in PHP and Javascript with' +
             ' Hubspot Integration.',
@@ -25,7 +25,7 @@ $(document).ready(function(){
     };
 
     var carousel = $('#carousel'),
-        slideWidth = 700,
+        slideWidth = 800,
         threshold = slideWidth/3,
         dragStart,
         dragEnd;
@@ -85,9 +85,15 @@ $(document).ready(function(){
         fillModal(this.id);
         $('.modal-wrap').addClass('visible');
     });
+
+    $('.popUpClose').on('click', function(){
+        $('.modal-wrap, #modal .button').removeClass('visible');
+    });
+
     $('.mask').on('click', function(){
         $('.modal-wrap').removeClass('visible');
-    }); // MASK VISIBILITY DESABLE
+    });
+
     function fillModal(id) {
         $('#modal .title').text(modalText[id].title);
         $('#modal .detail').text(modalText[id].detail);

@@ -127,6 +127,10 @@ footer {
   opacity: 1;
 }
 
+.content > .transition {
+  transition: .5s;
+}
+
 footer {
 	background-color: $darkGray;
 	text-transform: uppercase;
