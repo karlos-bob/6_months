@@ -1,15 +1,20 @@
 $default-font: "raleway-regular", sans-serif;
 $accent: orange;
-$text: #333;
-$titles: #444649;
-$lightGray: #f5f5f5;
+$text: #080c1c;
+$titles: #000;
+$lightGray: #F1F1F1;
+$middleGray: #4C4C4C;
 $darkGray: #1B242F;
 $textGray: #8F9AA7;
 
-$pink: #E31B6D;
-$blue: #04c2c9;
-$lightBlue: #0b93ee;
 
+$pink: #e5298a;
+$blue: #2c72e3;
+$lightBlue: #0b93ee;
+$green: #15ae61;
+
+$gradient_green: #13D3B6;
+$gradient_blue: #01B7FB;
 // Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
 $grid-gutter-width: 30px;
 $grid-columns: 12;
@@ -18,27 +23,4 @@ $container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px);
 
 $gutter: $grid-gutter-width;
 
-.sectionTitle {
-    position: relative;
-    display: block;
-    width: 100%;
-    font-size: 30pt;
-    font-family: "raleway-bold";
-    text-align: center;
-    text-transform: uppercase;
-    color: $titles;
-    position: relative;
-    margin: 0 0 35px 0;
 
-    &:after {
-        content: '';
-        width: 70px;
-        height: 4px;
-        background: $titles;
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: 0 auto;
-    }
-}

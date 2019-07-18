@@ -21,11 +21,10 @@
     }
 
     main {
-        section#myProjects > .gallery {
-            width: 100%;
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(6, 300px);
-        }
+        //section#projects > .gallery {
+        //    grid-template-columns: 1fr;
+        //    grid-template-rows: repeat(6, 300px);
+        //}
     }
 }
 
@@ -45,23 +44,21 @@
 //ОТ ≤768px
 @include media-breakpoint-up(md) {
     main {
-        // padding: 0 3%;
-        section#myProjects > .gallery {
-            width: 100%;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: repeat(3, 300px);
-            grid-gap: 0;
-        }
+        //section#projects > .gallery {
+        //    width: 100%;
+        //    grid-template-columns: 1fr 1fr;
+        //    grid-template-rows: repeat(3, 300px);
+        //}
     }
 }
 
 //ОТ ≤992px
 @include media-breakpoint-up(lg) {
     main {
-        section#myProjects > .gallery {
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 300px);
-        }
+        //section#projects > .gallery {
+        //    grid-template-columns: repeat(3, 1fr);
+        //    grid-template-rows: repeat(2, 300px);
+        //}
 
         section#contactMe > .feedback {
             min-width: 600px;
