@@ -5,7 +5,9 @@
     <bookmark url="file://$PROJECT_DIR$/src/js/partials/mail.js" line="0" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d999bc00-7a3f-4a2e-9a09-4b02ecfeb250" name="Default" comment="" />
+    <list default="true" id="d999bc00-7a3f-4a2e-9a09-4b02ecfeb250" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -273,12 +275,12 @@
       <workItem from="1563278467084" duration="15226000" />
       <workItem from="1563352173407" duration="4000" />
       <workItem from="1563352223041" duration="968000" />
-      <workItem from="1563472184667" duration="520000" />
+      <workItem from="1563472184667" duration="1530000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230101000" />
+    <option name="totallyTimeSpent" value="231111000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1688" y="18" width="1696" height="1026" extended-state="6" />
